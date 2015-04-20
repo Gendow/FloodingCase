@@ -66,7 +66,7 @@ to init
   
   ;;the input elevation grid
   ;;-------------------------
-  set elevationDataSetName "data/ahn100_f.asc" ;path need to exist!
+  set elevationDataSetName "data/export/defaultDEM.asc" ;path need to exist!
   
 
   ;;name of the export grids showing the results of the flooding (will be postfixed by the clocktick)
