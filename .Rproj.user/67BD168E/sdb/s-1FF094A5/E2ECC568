@@ -1,12 +1,12 @@
 {
-    "contents" : "\n\nlibrary(sp)\nlibrary(rgdal)\nlibrary(gstat)\nlibrary(rgeos)",
+    "contents" : "\n\nlibrary(sp)\nlibrary(rgdal)\nlibrary(gstat)\nlibrary(rgeos)\n\nHi Damiano",
     "created" : 1429516338957.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "3810074898",
+    "hash" : "3013692696",
     "id" : "E2ECC568",
-    "lastKnownWriteTime" : 1429516542,
+    "lastKnownWriteTime" : 1429516922,
     "path" : "D:/Geostat/FloodingCase/main.R",
     "project_path" : "main.R",
     "properties" : {
