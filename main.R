@@ -66,5 +66,4 @@ for(i in 1:100)
 #uncertain inflow
 inflow.sim <- rnorm(n=MC, mean = 2700, sd = 120)
 
-write.table(inflow.sim, file = "export/inflow.txt", col.names = "inflow")
-
+write.table(inflow.sim, file = "export/inflow.txt", quote = F, col.names = 2160)
