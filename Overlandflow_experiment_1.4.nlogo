@@ -108,7 +108,7 @@ to go-batch
     init
 
     set fileNr 1
-    file-open "export/experiment/inflow1_25.txt"
+    file-open "export/experiment/inflow76_100.txt"
     let runtime file-read  
     set export-frequentie runtime
     while [not file-at-end?]
