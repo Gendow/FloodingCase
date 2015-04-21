@@ -126,7 +126,7 @@ to go-batch
       ;;define the name for the result grid
       ;;-----------------------------------
       ;the path and output name for the export ascii grid file
-      set exportGridName  word(word (word (word (word "export/output/result_" experimentnr)"_") influx) "_") fileNr
+      set exportGridName  word(word (word (word (word "export/output/experiment1/result_" experimentnr)"_") influx) "_") fileNr
       ;;run the model 
       ;;-------------
       ;; check that model does not run more than number of ticks specified in the runtime variable
@@ -467,8 +467,8 @@ GRAPHICS-WINDOW
 355
 -171
 0
-1
-1
+0
+0
 1
 ticks
 30.0
