@@ -130,4 +130,8 @@ spplot(prob3, zcol = "variance", main = "Variance of flooding", col.regions = co
 spplot(prob3, zcol = "sd", main = "Sdv of flooding", col.regions = colorRampPalette(c("white", "green", "yellow", "red"))(30), 
        sp.layout = list("sp.polygons", studarea, first = F))
 
+#Export maps
+dev.print(png, file=".....png", wdith=500, height.300)
+dev.off()
+
 
