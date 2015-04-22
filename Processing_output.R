@@ -35,7 +35,8 @@ coordinates(prob) <- coordinates(mask)
 gridded(prob) <- TRUE
 
 # plot using blue, pink, yellow colorramp
-spplot(prob, zcol=1, col.regions=bpy.colors())
+spplot(prob, zcol=1, col.regions = colorRampPalette(c("white", "green", "yellow", "red"))(30), 
+       sp.layout = list("sp.polygons", studarea, first = F))
 
 #Calculation and plotting of mean, sd and variance per grid cell
 prob$Variance <- apply(fr, 1 , function(x) var(x))
@@ -73,7 +74,8 @@ coordinates(prob2) <- coordinates(mask)
 gridded(prob2) <- TRUE
 
 # plot prob map
-spplot(prob2, zcol=1, col.regions=terrain.colors(2))
+spplot(prob2, zcol=1, col.regions = colorRampPalette(c("white", "green", "yellow", "red"))(30), 
+       sp.layout = list("sp.polygons", studarea, first = F))
 
 #Calculation and plotting of mean, sd and variance per grid cell
 prob2$variance <- apply(exp2, 1 , function(x) var(x))
@@ -111,7 +113,8 @@ coordinates(prob3) <- coordinates(mask)
 gridded(prob3) <- TRUE
 
 # plot prob map
-spplot(prob3, zcol=1, col.regions=bpy.colors())
+spplot(prob3, zcol=1, col.regions = colorRampPalette(c("white", "green", "yellow", "red"))(30), 
+       sp.layout = list("sp.polygons", studarea, first = F))
 
 #Calculation and plotting of mean, sd and variance per grid cell
 prob3$variance <- apply(exp3, 1 , function(x) var(x))
