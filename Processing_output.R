@@ -39,7 +39,7 @@ spplot(prob, zcol=1, col.regions = colorRampPalette(c("white", "green", "yellow"
        sp.layout = list("sp.polygons", studarea, first = F))
 
 #Calculation and plotting of mean, sd and variance per grid cell
-prob$Variance <- apply(fr, 1 , function(x) var(x))
+prob$variance <- apply(fr, 1 , function(x) var(x))
 prob$sd <- apply(fr, 1 , function(x) sd(x))
 prob$mean <- apply(fr, 1 , function(x) mean(x))
 
@@ -134,4 +134,21 @@ spplot(prob3, zcol = "sd", main = "Sdv of flooding", col.regions = colorRampPale
 dev.print(png, file=".....png", wdith=500, height.300)
 dev.off()
 
+# Calculating contributions
 
+# Contribution influx
+
+contribution$influx <- 100 * prob2$variance / prob$variance
+
+spplot(contribution, zcol = "influx")
+
+# contribution dem
+
+contribution$dem <- 100 * prob3$variance / prob$variance
+
+spplot(contribution, zcol = "dem")
+
+# contribution sum
+contribution$sum <- contribution$influx + contribution$dem
+
+spplot(contribution, zcol = "sum")
